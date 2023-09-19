@@ -6,7 +6,7 @@ A basic integration of `pandoc` features on Neovim.
 
 `:PandocWrite`: executes `pandoc filename.foo -o filename.pdf`
 
-`:PandocRead`: executes `atril filename.pdf`
+`:PandocRead`: executes `xdg-open filename.pdf`
 
 ## TODO list
 

@@ -16,7 +16,7 @@ end
 
 function M.read()
     local out = getDocName(vim.api.nvim_buf_get_name(0))
-    os.execute("atril " .. out .. " &")
+    os.execute("xdg-open " .. out .. " &")
 end
 
 return M
