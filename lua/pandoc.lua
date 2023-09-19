@@ -9,14 +9,14 @@ end
 function M.write()
     local buf = vim.api.nvim_buf_get_name(0)
     local out = getDocName(buf)
-    local command = "pandoc " .. buf .. " -o " .. out
+    local command = "pandoc " .. buf .. " -o " .. out .. " &"
     print(command)
     os.execute(command)
 end
 
 function M.read()
     local out = getDocName(vim.api.nvim_buf_get_name(0))
-    os.execute("atril " .. out)
+    os.execute("atril " .. out .. " &")
 end
 
 return M
