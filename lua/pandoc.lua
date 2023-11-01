@@ -7,8 +7,7 @@ local function getDocName(buf_name, ext)
     if (ext == nil) then
         ext = "pdf"
     end
-    local og_ext = string.match(buf_name, "[^.]+$")
-    local doc = string.gsub(buf_name, og_ext, ext)
+    local doc = string.gsub(buf_name, "[^.]+$", ext)
     return doc
 end
 
